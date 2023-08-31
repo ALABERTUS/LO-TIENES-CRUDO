@@ -1,38 +1,42 @@
 import React from "react";
+import './Contact.css';
 
 export const Contact = () => {
+
   return (
     <>
-      <h1>Services</h1>
-      <div>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem sunt
-        itaque, perferendis necessitatibus corrupti ea magni voluptatibus est
-        ipsa. Nulla praesentium dolore eos alias incidunt, odio et eaque, sunt
-        vitae corporis animi, itaque architecto. Sunt minima nostrum fugiat
-        quibusdam voluptate dolore illo cupiditate quam odio sequi. Consequatur
-        tempora ullam, ipsam molestias dolor dolores tempore. Molestias, error
-        porro tenetur delectus numquam animi aut quod consequuntur? Dolor sequi
-        quisquam ex, eaque explicabo, labore maxime veniam voluptas enim
-        recusandae architecto est voluptates optio libero officiis consectetur
-        possimus voluptate ipsam alias velit veritatis reprehenderit
-        repudiandae. Ullam praesentium inventore minima eius dolorem omnis fugit
-        facilis.
-      </div>
       <br />
-      <div>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
-        libero laboriosam quia totam, ducimus dolorum velit voluptates ipsam ad
-        labore repellendus! Reprehenderit corporis labore totam est quas natus
-        non quis? Atque porro obcaecati error hic perspiciatis itaque
-        reprehenderit ut aperiam, ipsa, repellendus voluptatum, architecto sint
-        delectus. Dolorem, officia nostrum? Quae similique eveniet, animi
-        laborum impedit commodi, deleniti cum adipisci atque quidem culpa
-        incidunt placeat id rem dolorum sit eligendi sapiente ea sed, voluptate
-        voluptates minima pariatur ipsam delectus. Inventore deserunt
-        exercitationem repudiandae ducimus nihil, assumenda vel ex optio aut
-        voluptates nostrum dolor beatae in voluptatem. Adipisci excepturi
-        nesciunt ab soluta.
+      <br />
+      <br />
+      <h3>Contact Form</h3>
+      <br />
+      <div className="container">
+        <form action="/action_page.php">
+          <label htmlFor="fname">First Name</label>
+          <input
+            type="text"
+            id="fname"
+            name="firstname"
+            placeholder="Your name.."
+          />
+          <label htmlFor="lname">Last Name</label>
+          <input
+            type="text"
+            id="lname"
+            name="lastname"
+            placeholder="Your last name.."
+          />
+          <label htmlFor="subject">Subject</label>
+          <textarea
+            id="subject"
+            name="subject"
+            placeholder="Write something.."
+            style={{ height: 200 }}
+            defaultValue={""}
+          />
+          <input type="submit" defaultValue="Submit" />
+        </form>
       </div>
-        </>
+    </>
   );
 };

@@ -1,17 +1,82 @@
-
-
 .box{
-    background-color: blue;
+    background-color: '#0353A4';
     display:flex;
     flex-direction: column;
     justify-content: center;
-    align-content: center;
+    align-items: center;
 }
-
+h1{
+    margin-bottom:5px;
+}
 .contenedor{
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    
+    border:2px solid #FFFFFF;
+    border-radius: 5px;
+    margin:20px 0 20px 0;
+    width:350px;
+    padding:10px 0 5px 0;
+}
+
+/* update */
+.edit-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+    width: 400px;
+    border:1px solid black;
+  }
+  
+  .edit-form h3 {
+    margin-top: 0;
+  }
+  
+  .edit-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .edit-form input,
+  .edit-form textarea {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 10px;
+    margin-left: 2px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .edit-form button {
+    margin-right: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .contenedor {
+      flex-basis: 50%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contenedor {
+      flex-basis: 100%;
+    }
+  
+    .edit-form {
+      width: 90%;
+    }
+  }
+
+button{
+    border-radius: 10px;
+    padding:5px 8px;
+    margin:10px;
 }

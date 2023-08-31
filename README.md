@@ -16,9 +16,11 @@ npm run dev
 ## Configuar Router
 
 import { BrowserRouter } from "react-router-dom";
+
 import ReactDOM from "react-dom/client";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
+
   <React.StrictMode>
     <BrowserRouter>
       <App />

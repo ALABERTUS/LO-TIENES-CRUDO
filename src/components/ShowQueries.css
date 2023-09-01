@@ -1,0 +1,28 @@
+
+
+.contenedor {
+    display: flex;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  .cel {
+    flex: 1; 
+    padding: 10px;
+  }
+  
+  .cel:first-child {
+    flex: 0.3; 
+  }
+  
+  .cel button {
+    margin-top: 5px;
+    background-color: #061a40;
+    color: rgb(253, 253, 253);
+  }
+  

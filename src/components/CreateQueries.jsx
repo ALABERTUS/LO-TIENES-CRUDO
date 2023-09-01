@@ -15,6 +15,7 @@ const CreateQueries = () => {
     const [localizacion, setLocalizacion] = useState("")
     const [comentario, setComentario] = useState("")
 
+    const [fechaDespleg, setFechaDespleg] = useState("")
     const [tecnologiaDespleg, setTecnologiaDespleg] = useState("")
     const [desarrolladorDespleg, setDesarrolladorDespleg] = useState(false)
     const [localizacionDespleg, setLocalizacionDespleg] = useState(false)
@@ -36,8 +37,10 @@ const CreateQueries = () => {
 
         <form onSubmit={store}>
             <div>
-                <label>Seleccionar fecha y hora</label>
-                <input type="datetime-local" value={fecha} onChange={(e) => setFecha(e.target.value)}/>
+            <button onClick={(e) => {e.preventDefault(); setFechaDespleg(!fechaDespleg)}}>Seleccionar facha y hora</button>
+                {fechaDespleg &&(
+                    <input type="datetime-local" value={fecha} onChange={(e) => setFecha(e.target.value)}/>
+                )}
 
             </div>
             <div>
@@ -60,9 +63,9 @@ const CreateQueries = () => {
                 <button onClick={(e) => {e.preventDefault(); setDesarrolladorDespleg(!desarrolladorDespleg)}}>Selecciona desarrollador</button>
                 {desarrolladorDespleg && (
                     <select value={desarrollador} onChange={(e) => setDesarrollador(e.target.value)}>
-                        <option value="albert">Albert</option>
-                        <option value="yue">Yue</option>
-                        <option value="ana">Ana</option>
+                        <option value="Albert">Albert</option>
+                        <option value="Yue">Yue</option>
+                        <option value="Ana">Ana</option>
                     </select>
                 )}
                 
@@ -73,9 +76,9 @@ const CreateQueries = () => {
                 <button onClick={(e) => {e.preventDefault(); setLocalizacionDespleg(!localizacionDespleg)}}>Selecciona localización</button>
                 {localizacionDespleg && (
                     <select value={localizacion} onChange={(e) => setLocalizacion(e.target.value)}>
-                        <option value="barcelona">Barcelona</option>
-                        <option value="bilbao">Bilbao</option>
-                        <option value="sansebastian">San Sebasian</option>   
+                        <option value="Barcelona">Barcelona</option>
+                        <option value="Bilbao">Bilbao</option>
+                        <option value="San Sebastian">San Sebasian</option>   
                     </select>
                 )}
                 

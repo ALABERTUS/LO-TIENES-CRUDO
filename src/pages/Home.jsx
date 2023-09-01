@@ -6,14 +6,14 @@ import UpdateQueries from "../components/UpdateQueries";
 const Home = () => {
   const [queriesToUpdate, setQueriesToUpdate] = useState(null);
 
-  const handleUpdateClick = (queryId) => {
-    setQueriesToUpdate(queryId);
+  const handleUpdateClick = (queriesId) => {
+    setQueriesToUpdate(queriesId);
   };
 
   return (
     <div>
       <ShowQueries handleUpdateClick={handleUpdateClick} />
-      {queriesToUpdate !== null && <UpdateQueries queryId={queriesToUpdate} />}
+      {queriesToUpdate !== null && <UpdateQueries queriesId={queriesToUpdate} />}
     </div>
   );
 }

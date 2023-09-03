@@ -40,35 +40,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 );
 ```
 
-## Esta parte se corresponde con el front-end con el diseño realizado en React, Html, Css, Javascript.
 
-## Instalar React + Vite
-npm create vite@latest project-name
 
-npm install axios
-
-npm install react-router-dom
-
-## Iniciar el servidor de desrrollo
-npm run dev
-
-## Configuar Router
-```
-import { BrowserRouter } from "react-router-dom";
-
-import ReactDOM from "react-dom/client";
-
-ReactDOM.createRoot(document.getElementById("root")).render(
-
-<React.StrictMode>
-  
-<BrowserRouter>
-    
-<App />
-      
-</BrowserRouter>
-    
-</React.StrictMode>
-  
-);
-```

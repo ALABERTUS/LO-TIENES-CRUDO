@@ -5,13 +5,16 @@
 
 ## Instalar React + Vite
 npm create vite@latest project-name
-
+```
 npm install axios
 
 npm install react-router-dom
+```
 
 ## Iniciar el servidor de desrrollo
+```
 npm run dev
+```
 
 ## Configuar Router
 ```

@@ -1,22 +1,22 @@
 export function formatDate(inputDateStr) {
     const inputDate = new Date(inputDateStr);
   
-    // 获取当前日期
+    // Get the current date
     const today = new Date();
     const tomorrow = new Date(today);
-    tomorrow.setDate(today.getDate() + 1); // 获取明天的日期
+    tomorrow.setDate(today.getDate() + 1); // Get tomorrow's date
   
-    // 定义月份名称映射
+    // Define a mapping of month names
     const monthNames = [
       'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
       'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
     ];
   
-    // 格式化时间
+    // Format the time
     const hours = inputDate.getHours().toString().padStart(2, '0');
     const minutes = inputDate.getMinutes().toString().padStart(2, '0');
   
-    // 判断日期是否是今天、明天或其他日期
+    // Check if the date is today, tomorrow ,or another date
     if (inputDate.toDateString() === today.toDateString()) {
       return (
         <div>

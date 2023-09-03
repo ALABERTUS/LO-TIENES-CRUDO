@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import './Create.css';
+import "./Create.css";
 
 const url = "http://localhost:8083/api/v1/consultas";
 
@@ -26,7 +26,6 @@ export const Create = () => {
         desarrollador: formData.desarrollador,
         localizacion: formData.localizacion,
         comentario: formData.comentario,
-
       });
       console.log("Form submitted successfully:", response);
       setSubmitStatus("success"); // Update submit status
@@ -62,8 +61,8 @@ export const Create = () => {
       <br />
       <br />
       <h1>Create a Form</h1>
-      <div className="create-form" >
-        <div className="form-contenedor" >
+      <div className="create-form">
+        <div className="form-contenedor">
           <br />
           <form onSubmit={handleSubmit}>
             <label htmlFor="date">Select a date:</label>
@@ -84,13 +83,14 @@ export const Create = () => {
               onChange={handleChange}
               value={formData.tecnologia}
               required
-            > 
-              <option value="" disabled>Please choose an option</option>
+            >
+              <option value="" disabled>
+                Please choose an option
+              </option>
               <option value="JavaScript">JavaScript</option>
               <option value="Python">Python</option>
               <option value="Java">Java</option>
             </select>
-            <br />
             <br />
             <label htmlFor="role">Select a role:</label>
             <select
@@ -99,8 +99,10 @@ export const Create = () => {
               onChange={handleChange}
               value={formData.desarrollador}
               required
-            > 
-              <option value="" disabled>Please choose an option</option>
+            >
+              <option value="" disabled>
+                Please choose an option
+              </option>
               <option value="desarrollador">Developer</option>
               <option value="Designer">Designer</option>
               <option value="Tester">Tester</option>
@@ -115,34 +117,32 @@ export const Create = () => {
               value={formData.localizacion}
               required
             >
-              <option value="" disabled>Please choose an option</option>
+              <option value="" disabled>
+                Please choose an option
+              </option>
               <option value="Madrid">Madrid</option>
               <option value="Barcelona">Barcelona</option>
               <option value="Valencia">Valencia</option>
             </select>
             <br />
-            <br />
             <label htmlFor="comments">Comments:</label>
-
             <textarea
               id="comments"
               name="comentario"
               rows={4}
               cols={50}
               onChange={handleChange}
-              
               defaultValue="Please write your comment here"
             />
             <br />
-            <br />
-            <button type="submit" onClick={handleSubmit}>Submit</button>
+            <button type="submit" onClick={handleSubmit}>
+              Submit
+            </button>
             <button type="button" onClick={handleCancel}>
               Cancel
             </button>
-
-          </form><br />
+          </form>
         </div>
-
         {submitStatus === "success" && <p>Form submitted successfully!</p>}
         {submitStatus === "error" && (
           <p>There was an error submitting the form.</p>

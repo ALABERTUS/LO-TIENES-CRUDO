@@ -9,6 +9,8 @@ npm create vite@latest project-name
 npm install axios
 
 npm install react-router-dom
+
+npm install react-icons
 ```
 
 ## Iniciar el servidor de desrrollo

@@ -1,6 +1,6 @@
 # LO-TIENES-CRUDO
 ## Desarrollar una aplicación "CRUD" Web en Java que permita pedir cita a los desarrolladores y equipos para solucionar problemas técnicos con la ayuda de desarrolladores de una empresa que se dedica a apagar incendios de código.
-![Screenshot](lo_tienes_crudos.jpeg)
+![Screenshot](lo_tienes_crudos.jpg)
 ## Esta parte se corresponde con el front-end con el diseño realizado en React, Html, Css, Javascript.
 
 ## Instalar React + Vite
@@ -33,7 +33,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   
 );
 ```
-=======
 
 ## Esta parte se corresponde con el front-end con el diseño realizado en React, Html, Css, Javascript.
 

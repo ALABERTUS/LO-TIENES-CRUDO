@@ -34,7 +34,7 @@ export const Create = () => {
         // Reset form data after successful submission
         fecha: "",
         tecnologia: "",
-        desarrollador: "",
+        desarrollador: "Developer",
         localizacion: "",
         comentario: "",
       });
@@ -83,7 +83,9 @@ export const Create = () => {
               name="tecnologia"
               onChange={handleChange}
               value={formData.tecnologia}
-            >
+              required
+            > 
+              <option value="" disabled>Please choose an option</option>
               <option value="JavaScript">JavaScript</option>
               <option value="Python">Python</option>
               <option value="Java">Java</option>
@@ -96,8 +98,10 @@ export const Create = () => {
               name="desarrollador"
               onChange={handleChange}
               value={formData.desarrollador}
-            >
-              <option value="Developer">Developer</option>
+              required
+            > 
+              <option value="" disabled>Please choose an option</option>
+              <option value="desarrollador">Developer</option>
               <option value="Designer">Designer</option>
               <option value="Tester">Tester</option>
             </select>
@@ -109,7 +113,9 @@ export const Create = () => {
               name="localizacion"
               onChange={handleChange}
               value={formData.localizacion}
+              required
             >
+              <option value="" disabled>Please choose an option</option>
               <option value="Madrid">Madrid</option>
               <option value="Barcelona">Barcelona</option>
               <option value="Valencia">Valencia</option>
@@ -124,7 +130,8 @@ export const Create = () => {
               rows={4}
               cols={50}
               onChange={handleChange}
-              value={formData.comentario}
+              
+              defaultValue="Please write your comment here"
             />
             <br />
             <br />

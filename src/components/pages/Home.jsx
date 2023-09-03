@@ -1,6 +1,9 @@
 import React from 'react';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { FaEdit } from 'react-icons/fa';
+import { FaTrash } from 'react-icons/fa';
+import { formatDate } from './DateUtils';
 import './Home.css';
 
 const url = "http://localhost:8083/api/v1/consultas";
@@ -13,6 +16,9 @@ export const Home = () => {
   const [updatedLocalizacion, setUpdatedLocalizacion] = useState('');
   const [updatedComentario, setUpdatedComentario] = useState('');
 
+  const [showDetails, setShowDetails] = useState(false);
+
+
   useEffect(() => {
     getAllConsultas();
   }, []);
@@ -21,6 +27,7 @@ export const Home = () => {
     try {
       const response = await axios.get(url);
       const data = response.data;
+   
       setConsultas(data);
     } catch (error) {
       console.log(error);
@@ -85,24 +92,35 @@ export const Home = () => {
     }
   };
 
+  const toggleDetails = () => {
+    setShowDetails(!showDetails);
+  };
+
   return (
 
     <div>
       <br />
       <br />
       <br />
-      <h1>Message</h1>
+      <h1 style={{color:'#061A40'}}>Message</h1>
       <div className="box" style={{ backgroundColor: '#0353A4' }}>
         {consultas.map((consulta) => (
           <div className="contenedor" key={consulta.id}>
-            <div className="contenedor-data" >
-              <p>fecha: {consulta.fecha}</p>
-              <p>tecnologia: {consulta.tecnologia}</p>
-              <p>desarrollador: {consulta.desarrollador}</p>
-              <p>localizacion: {consulta.localizacion}</p>
-              <p>comentario: {consulta.comentario}</p>
-              <button onClick={() => handleUpdate(consulta)}>Update</button>
-              <button onClick={() => handleDelete(consulta.id)}>Delete</button>
+            <div  className='fecha'>
+              {formatDate(consulta.fecha)}
+            </div>
+            <div className='message'>
+              <span>{consulta.tecnologia}</span> 
+              <span> {consulta.desarrollador}</span>
+              <span>{consulta.localizacion}</span>
+              {showDetails && (
+    <div className="comentario">{consulta.comentario}</div>
+  )}
+            </div>
+            <div className='edit-delete-detail'>
+              <button onClick={toggleDetails}>{showDetails ? 'Hide' : 'Details'}</button>
+              <FaEdit onClick={() => handleUpdate(consulta)} size={30} style={{ color: '#061A40' }} />
+              <FaTrash onClick={() => handleDelete(consulta.id)} size={30} style={{ color: '#2c8a0a' }} />
             </div>
           </div>
         ))}
@@ -113,7 +131,7 @@ export const Home = () => {
           <form onSubmit={handleEditFormSubmit}>
             <label>Fecha</label>
             <input
-              type="date"
+              type="datetime-local"
               value={updatedFecha}
               onChange={(e) => setUpdatedFecha(e.target.value)}
             />

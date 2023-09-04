@@ -1,0 +1,61 @@
+.card {
+  width: 671px;
+  height: 116px;
+  background: #FFF;
+  border-radius: 15px;
+  justify-content: flex-start;
+  padding: 10px;
+}
+
+.card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.time-info {
+    flex: 1;
+    font-weight: bold;
+}
+
+.time-info h3 {
+    margin: 0;
+}
+
+.info-developer {
+    flex: 2;
+    text-align: center;
+}
+
+.info-developer-text {
+    color: #000;
+    font-family: Prosto One;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.buttons {
+    gap: 20px;
+}
+.buttons button {
+    border: none;
+    padding: 5px 10px;
+    margin-right: 10px;
+    background-color: transparent;
+}
+
+.detail-button {
+    flex-shrink: 0;
+    background-color: #061A40 !important;
+    color: #FFF;
+    font-family: Prosto One;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    border-radius: 70px;
+}
+

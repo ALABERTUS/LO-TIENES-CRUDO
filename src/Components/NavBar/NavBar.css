@@ -1,0 +1,58 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #FBF9F9;;
+    padding: 10px;
+}
+
+.container-logo {
+    display: flex;
+    height: 88px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    padding-left: 40px;
+  
+}
+
+.texto-logo {
+    font-weight: 900;
+    color: #061A40;
+    font-family: Prosto One;
+    font-size: 35px;
+    font-style: normal;
+    line-height: normal;
+}
+
+.nav-options {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    padding-right: 50px;
+}
+
+.nav-options li {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-options a {
+    text-decoration: none;
+    font-weight: 400;
+    color: #061A40;
+    font-family: Prosto One;
+    font-size: 30px;
+    font-style: normal;
+    line-height: normal;
+}
+
+
+
+
+
+
+
+
+

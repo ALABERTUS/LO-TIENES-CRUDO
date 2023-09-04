@@ -1,0 +1,50 @@
+.body-container {
+    background: #0353A4;
+    height: 834px;
+}
+
+.text-container {
+    padding-top: 30px;
+
+}
+
+.text-style {
+    color: #FFF;
+    font-family: Prosto One;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.button-container {
+    padding-top: 20px;
+}
+
+.button-content {
+    margin-left: 500px;
+}
+
+.button-style {
+    width: 164px;
+    height: 48px;
+    flex-shrink: 0;
+    background-color: #061A40;
+    color: #FFF;
+    font-family: Prosto One;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 15px;
+}
+
+.card-container {
+    text-align: center;
+}
+
+.cards-list {
+    padding-top: 20px;
+    display: grid;
+    justify-content: center;
+}
